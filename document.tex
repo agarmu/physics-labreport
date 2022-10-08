@@ -1,0 +1,125 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{layout,geometry}
+\geometry{
+    letterpaper,
+    inner=1in,
+    top=1in,
+    outer=1in,
+    bottom=1in,
+    marginparwidth=0.5in
+}
+\usepackage{graphicx}
+\usepackage{import,xifthen,pdfpages,transparent}
+\usepackage{float}
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Libre Baskerville}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Montserrat}
+\setmonofont[Scale=MatchLowercase]{JetBrainsMono Nerd Font Mono}
+
+\usepackage{booktabs, longtable}
+\usepackage[shortlabels]{enumitem}
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multirow, multicol}
+
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+\usepackage{cancel}
+\usepackage{bm}
+
+\usepackage{systeme} % Systems of eqns.
+
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+
+% horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+
+% hide parts
+\newcommand\hide[1]{}
+
+
+
+% si unitx
+\usepackage{siunitx}
+\sisetup{locale = US}
+
+% colored box environments
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{intersections, angles, quotes, calc, positioning}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\tikzset{
+    force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
+}
+
+
+\title{Title}
+\author{Author}
+\date{}  %Put date here
+
+\begin{document}
+\maketitle
+
+The abstract is a concise summary of the lab report. A good abstract should state the purpose, procedure, principal 
+results, conclusion, and implications of the lab in a single paragraph that is generally 100 to 200 words in length 
+(use your word processor’s word count tool to check length).
+\section{Introduction}
+
+A complete scientific lab report has an introduction that gives the context for the experiment, the background theory, 
+and a description of the experimental procedure and equipment used. 
+
+\section{Data and Results}
+
+The results of your experiment must be well organized and easy to read. When appropriate, tables or graphs should 
+be used to present data and results. Graphs must be properly constructed (with a computer or by hand, as directed) 
+with descriptive titles, labeled axes with relevant units, and calculated parameters properly interpreted (e.g. What do 
+the slope and intercept represent?) All measured values must have four critical parts:
+\begin{enumerate}
+    \item A label (word or symbol) that clearly identifies the measured value
+    \item The numerical value for the measurement (rounded to be consistent with the uncertainty)
+    \item A reasonable estimate of the uncertainty associated with the measurement
+    \item An appropriate unit of measure (SI units are usually preferred)
+\end{enumerate}
+
+
+Sample calculations, including an analysis of the experimental uncertainties, should be shown for any derived or 
+calculated values as appropriate. Your original, unaltered data sheet must be included either in the data section or 
+as an appendix.
+\section{Discussion}
+
+In the discussion section, summarize the results you obtained, and then discuss any discrepancies between your 
+results and what was expected according to the given theoretical predictions or your own hypotheses. Did the 
+experimental results agree with your predictions or the findings from other lab groups? If not, what is the most likely 
+reason for the discrepancy? Remember to consider the uncertainty of your results when determining agreement. 
+Identify the primary source of error in your results and justify your answer based on your uncertainty estimates. 
+(Note: General statements without justification and explanation are not acceptable. “Human error” is not an 
+acceptable source of error!) How could you improve the quality of your measurements with the available equipment? 
+What did you learn or discover from this lab? The discussion section for most labs should be about one to two 
+pages in length. Remember that your discussion will be graded on the quality of your explanations, not the quantity. 
+
+% For many users, the previous commands will be enough.
+% If you want to directly input Unicode, add an Input Menu or Keyboard to the menu bar 
+% using the International Panel in System Preferences.
+% Unicode must be typeset using a font containing the appropriate characters.
+% Remove the comment signs below for examples.
+
+% \newfontfamily{\A}{Geeza Pro}
+% \newfontfamily{\H}[Scale=0.9]{Lucida Grande}
+% \newfontfamily{\J}[Scale=0.85]{Osaka}
+
+% Here are some multilingual Unicode fonts: this is Arabic text: {\A السلام عليكم}, this is Hebrew: {\H שלום}, 
+% and here's some Japanese: {\J 今日は}.
+\end{document}
